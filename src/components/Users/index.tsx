@@ -117,6 +117,7 @@ class Users extends React.Component<UsersProp, UsersState> {
         password: '',
         adding: false
       });
+      await this.loadUsers();
     } else {
       this.setState({
         adding: false,
