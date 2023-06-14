@@ -6,6 +6,7 @@ import axios from 'axios';
 import type { TokenPayload, User } from '../../types';
 import Pagination from '../Pagination';
 import Header, { Link } from '../Header';
+import './style.scss';
 
 interface UsersProp {}
 
@@ -185,7 +186,7 @@ class Users extends React.Component<UsersProp, UsersState> {
       if (typeof user === 'undefined') break;
 
       results.push(
-        <div className="card mb-3" key={i}>
+        <div className="user-card card mb-3" key={i}>
           <div className="card-body">
             <h5>{ user.studentId }</h5>
             <p>{ user.username } ({ user.name })</p>
